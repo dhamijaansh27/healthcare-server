@@ -3,11 +3,11 @@ import Appointment from "../model/Appointment.js";
 import Patient from "../model/Patient.js";
 import Doctor from "../model/Doctor.js";
 import { sendEmail } from "../utils/sendEmail.js";
-import authMiddleware from "../middleware/authmiddleware.js";
+import authmiddleware from "../middleware/authmiddleware.js";
 
 const router = express.Router();
 
-router.post("/create",authMiddleware, async (req, res) => {
+router.post("/create",authmiddleware, async (req, res) => {
 
   try {
 
